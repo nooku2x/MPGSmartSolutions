@@ -92,7 +92,7 @@ We use the following third-party services that may collect information:
 
 Each third-party service operates under its own privacy policy:
 - Google Privacy Policy: https://policies.google.com/privacy
-- Paystack Privacy Policy: https://paystack.com/privacy
+- Paystack Privacy Policy: https://paystack.com/terms
 
 ---
 

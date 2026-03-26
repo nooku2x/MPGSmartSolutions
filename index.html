@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPG Smart Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a1a;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            background: radial-gradient(ellipse at 50% 30%, rgba(207, 181, 59, 0.08) 0%, transparent 60%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(207, 181, 59, 0.3), transparent);
+        }
+
+        .logo-mark {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #CFB53B, #a8912e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 900;
+            color: #0a0a1a;
+            margin-bottom: 32px;
+            box-shadow: 0 8px 32px rgba(207, 181, 59, 0.3);
+        }
+
+        .company-name {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .company-name span {
+            background: linear-gradient(135deg, #CFB53B, #e8d56b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+            margin-bottom: 48px;
+        }
+
+        /* App Card */
+        .app-showcase {
+            max-width: 480px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(207, 181, 59, 0.15);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 48px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-showcase:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(207, 181, 59, 0.1);
+        }
+
+        .app-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(207, 181, 59, 0.15);
+            color: #CFB53B;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .app-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .app-description {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .app-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .feature-tag {
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #CFB53B, #a8912e);
+            color: #0a0a1a;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .store-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(207, 181, 59, 0.3);
+        }
+
+        .coming-soon {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.35);
+            margin-top: 8px;
+        }
+
+        /* Links */
+        .links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .links a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .links a:hover {
+            color: #CFB53B;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 24px 20px;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 13px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer a {
+            color: rgba(207, 181, 59, 0.6);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #CFB53B;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .company-name {
+                font-size: 30px;
+            }
+
+            .tagline {
+                font-size: 15px;
+            }
+
+            .app-showcase {
+                padding: 24px;
+            }
+
+            .app-name {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="logo-mark">M</div>
+
+    <h1 class="company-name"><span>MPG Smart Solutions</span></h1>
+    <p class="tagline">Building digital experiences that preserve culture</p>
+
+    <div class="app-showcase">
+        <div class="app-badge">Our Flagship App</div>
+        <h2 class="app-name">AsantePost: Heritage &amp; Culture</h2>
+        <p class="app-description">
+            Preserving the royal heritage of the Asante Kingdom. Explore history, sacred artifacts,
+            traditional rhythms, cultural stories, and the Asante sacred calendar — all in one app.
+        </p>
+        <div class="app-features">
+            <span class="feature-tag">History</span>
+            <span class="feature-tag">Artifacts</span>
+            <span class="feature-tag">Sacred Calendar</span>
+            <span class="feature-tag">Traditional Rhythms</span>
+            <span class="feature-tag">Stories &amp; Folklore</span>
+            <span class="feature-tag">Akom Wisdom</span>
+            <span class="feature-tag">Community Forum</span>
+        </div>
+        <a href="#" class="store-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.372 2.372 0 01-.61-1.604V3.418c0-.614.222-1.16.609-1.604zm.804-.614L15.206 7.6l-2.714 2.714L4.413 1.2zm11.447 7.054l2.763 1.59-2.013 2.014-3.464-3.464 2.714-2.14zM4.413 22.8l8.079-9.114 2.714 2.714L4.413 22.8z"/>
+            </svg>
+            Google Play
+        </a>
+        <p class="coming-soon">Coming soon on Google Play</p>
+    </div>
+
+    <div class="links">
+        <a href="privacy_policy.html">Privacy Policy</a>
+        <a href="mailto:samach25@yahoo.com">Contact Us</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 MPG Smart Solutions. All rights reserved.</p>
+    <p style="margin-top: 4px;">
+        <a href="mailto:samach25@yahoo.com">samach25@yahoo.com</a> &middot;
+        <a href="mailto:nooku2x@gmail.com">nooku2x@gmail.com</a>
+    </p>
+</footer>
+
+</body>
+</html>

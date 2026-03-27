@@ -147,12 +147,78 @@
             color: #CFB53B;
         }
 
+        /* Site Nav */
+        .site-nav {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+        }
+
+        .site-nav a.nav-home {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .site-nav .nav-logo-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #CFB53B, #a8912e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
+            color: #1a1a2e;
+        }
+
+        .site-nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .site-nav-links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .site-nav-links a:hover {
+            color: #CFB53B;
+        }
+
         footer {
             text-align: center;
             padding: 24px 20px;
             font-size: 13px;
             color: #888;
             border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .footer-nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-nav a:hover {
+            color: #CFB53B;
         }
 
         @media (max-width: 600px) {
@@ -183,6 +249,17 @@
     </style>
 </head>
 <body>
+
+<div class="site-nav">
+    <a href="index.html" class="nav-home">
+        <div class="nav-logo-icon">M</div>
+        MPG Smart Solutions
+    </a>
+    <div class="site-nav-links">
+        <a href="index.html">Home</a>
+        <a href="delete_account.html">Delete Account</a>
+    </div>
+</div>
 
 <header>
     <h1>Privacy Policy</h1>
@@ -373,7 +450,13 @@
 </div>
 
 <footer>
-    &copy; 2026 MPG Smart Solutions. All rights reserved.
+    <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="privacy_policy.html">Privacy Policy</a>
+        <a href="delete_account.html">Delete Account</a>
+        <a href="mailto:samach25@yahoo.com">Contact</a>
+    </div>
+    <p>&copy; 2026 MPG Smart Solutions. All rights reserved.</p>
 </footer>
 
 </body>
